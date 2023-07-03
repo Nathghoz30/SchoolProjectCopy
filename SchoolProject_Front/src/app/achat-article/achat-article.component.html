@@ -1,0 +1,28 @@
+<div class="container">
+    <a class="btn btn-outline-success" href="MesArticles">Retour à la page mes articles</a><br><br><br>
+    <br>
+    <h2 class="title">Mes achats</h2><br>
+    <div class="row">
+        <div *ngFor="let a of art" class="col-sm-4 my-font">
+            <div class="card p-2">
+                <div class="row">
+                    <div class="col-sm-6" *ngIf="mediaExist(a.baniere)">
+                        <img [src]="changeFormatMedia(a.baniere)" width="15%" class="card-img-top" alt="baniere" />
+                    </div>
+                    <div class="col-sm-6" *ngIf="!mediaExist(a.baniere)">
+                        <img src="/assets/img/no-image.png" width="15%" class="card-img-top" alt="baniere" />
+                    </div>
+
+                    <div class="col-sm-6">
+                        <h3>{{a.nom}}</h3><br>
+                        <h4>Description: </h4>
+                        <h5>{{a.description}}</h5><br>
+                        <h3>Prix: </h3>
+                        <h4>{{a.prix}}€</h4><br>
+                        <h6>Vendu par: {{a.vendeur.pseudo}}</h6>
+                    </div><br>
+                </div>
+            </div><br>
+        </div>
+    </div>
+</div>

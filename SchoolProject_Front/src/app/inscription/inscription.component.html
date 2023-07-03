@@ -1,0 +1,60 @@
+<div class="container mt-4 d-grid gap-2">
+    <div class="content-login">
+        <div class="card shadow-card">
+            <div class="card-header bg-success text-white card-header-back">
+                <h4 class="card-title-perso text-center">INSCRIPTION</h4>
+
+            </div>
+            <div class="card-body">
+                <form #inscrip="ngForm" (ngSubmit)="inscription(inscrip.value)">
+
+                    <div class="form-group">
+                        <label for="nom" class="my-label">Nom</label>
+                        <input class="form-control" type="text" name="nom" ngModel="" #log placeholder="nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom" class="my-label">Prenom</label>
+                        <input class="form-control" type="text" name="prenom" ngModel="" #log placeholder="prenom">
+                    </div>
+                    <div class="form-group">
+                        <label for="naissance" class="my-label">Date de naissance</label>
+                        <input class="form-control" type="date" name="dateNaissance" ngModel="" #log
+                            placeholder="naissance">
+                    </div>
+                    <div class="form-group">
+                        <label for="adresse" class="my-label">Adresse</label>
+                        <input class="form-control" type="text" name="adresse" ngModel="" #log placeholder="adresse">
+                    </div>
+                    <div class="form-group">
+                        <label for="ville" class="my-label">Ville</label>
+                        <input class="form-control" type="text" name="ville" ngModel="" #log placeholder="ville">
+                    </div>
+                    <div class="form-group">
+                        <label for="cp" class="my-label">Code Postale</label>
+                        <input class="form-control" type="text" name="cp" ngModel="" #log placeholder="cp">
+                    </div>
+                    <div class="form-group">
+                        <label for="pseudo" class="my-label">Pseudo</label>
+                        <input class="form-control" type="text" name="pseudo" ngModel="" #log placeholder="pseudo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login" class="my-label">Login</label>
+                        <input class="form-control" type="text" name="login" ngModel="" #log placeholder="login">
+                    </div>
+                    <div class="form-groupe">
+                        <label for="login" class="my-label">Password</label>
+                        <input class="form-control" name="password" type="password" ngModel="" #pass
+                            placeholder="password">
+                    </div><br>
+
+                    <button class="btn btn-outline-warning" type="submit">S'inscrire</button>
+                </form>
+                <br>
+                <button (click)="CallConnexion()" class="btn btn-outline-primary" type="submit">Se connecter</button>
+            </div>
+            <p></p>
+        </div>
+    </div>
+
+</div>

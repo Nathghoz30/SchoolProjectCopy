@@ -1,0 +1,52 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="accueil">Accueil</a>
+        <a class="navbar-brand" href="creerArticle">Vendre un article</a>
+        <a class="navbar-brand" href="MesArticles">Mes articles</a>
+        <a class="navbar-brand" href="Messages">Messages</a>
+        <a class="navbar-brand" href="Contact">Nous contactez</a>
+
+        <div>
+            <div class="container headerComponent min-height-header">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info" (click)="monCompte()"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z" />
+                        </svg>Utilisateur: {{user.pseudo}}</button>
+                    <button type="button" id="dropdownMenuButton"
+                        class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="VoirProfil">Voir mon profil</a>
+                        <a class="dropdown-item" href="ModifProfil">Modifier mon profil</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="Deco">Me deconnecter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+    </div>
+</nav>
+<br>
+
+
+<div class="container"><br>
+
+
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="btn btn-outline-success" href="AchatArticle">Article acheté</a>
+        </li>&nbsp;
+        <li class="nav-item">
+            <a class="btn btn-outline-primary" href="EnVente">Articles mis en ventes</a>
+        </li>
+    </ul>
+
+
+</div>

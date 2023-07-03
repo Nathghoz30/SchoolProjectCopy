@@ -1,0 +1,92 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="accueil">Accueil</a>
+      <a class="navbar-brand" href="creerArticle">Vendre un article</a>
+      <a class="navbar-brand" href="MesArticles">Mes articles</a>
+      <a class="navbar-brand" href="Messages">Messages</a>
+      <a class="navbar-brand" href="Contact">Nous contactez</a>
+  
+      <div>
+        <div class="container headerComponent min-height-header">
+          <div class="btn-group">
+            <button type="button" class="btn btn-info" (click)="monCompte()"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                <path
+                  d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z" />
+              </svg>Utilisateur: {{user.pseudo}}</button>
+            <button type="button" id="dropdownMenuButton" class="btn btn-info dropdown-toggle dropdown-toggle-split"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="VoirProfil">Voir mon profil</a>
+              <a class="dropdown-item" href="ModifProfil">Modifier mon profil</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Deco">Me deconnecter</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <br>
+    </div>
+  </nav>
+  <br>
+  <div class="container mt-4 d-grid gap-2">
+      <div class="content-login">
+          <div class="card shadow-card">
+              <div class="card-header bg-success text-white card-header-back">
+                  <h4 class="card-title-perso text-center">Modifier mon profil</h4>
+  
+              </div>
+              <div class="card-body">
+                  <form #profil="ngForm" (ngSubmit)="modifProfil(profil.value)">
+  
+                      <div class="form-group">
+                          <label for="nom" class="my-label">Nom</label>
+                          <input class="form-control" type="text" name="nom" ngModel="{{user.nom}}" #log>
+                      </div>
+                      <div class="form-group">
+                          <label for="prenom" class="my-label">Prenom</label>
+                          <input class="form-control" type="text" name="prenom" ngModel="{{user.prenom}}" #log placeholder="prenom">
+                      </div>
+                      <div class="form-group">
+                          <label for="naissance" class="my-label">Date de naissance</label>
+                          <input class="form-control" type="date" name="dateNaissance" ngModel="{{user.dateNaissance}}" #log placeholder="naissance">
+                      </div>
+                      <div class="form-group">
+                          <label for="adresse" class="my-label">Adresse</label>
+                          <input class="form-control" type="text" name="adresse" ngModel="{{user.adresse}}" #log placeholder="adresse">
+                      </div>
+                      <div class="form-group">
+                          <label for="ville" class="my-label">Ville</label>
+                          <input class="form-control" type="text" name="ville" ngModel="{{user.ville}}" #log placeholder="ville">
+                      </div>
+                      <div class="form-group">
+                          <label for="cp" class="my-label">Code Postale</label>
+                          <input class="form-control" type="text" name="cp" ngModel="{{user.cp}}" #log placeholder="cp">
+                      </div>
+                      <div class="form-group">
+                          <label for="pseudo" class="my-label">Pseudo</label>
+                          <input class="form-control" type="text" name="pseudo" ngModel="{{user.pseudo}}" #log>
+                      </div>
+  
+                      <div class="form-group">
+                          <label for="login" class="my-label">Login</label>
+                          <input class="form-control" type="text" name="login" ngModel="{{user.login}}" #log placeholder="login">
+                      </div>
+                      <div class="form-groupe">
+                          <label for="login" class="my-label">Password</label>
+                          <input class="form-control" name="password" type="password" ngModel="{{user.password}}" #pass
+                              placeholder="password">
+                      </div><br>
+  
+                      <button class="btn btn-outline-info" type="submit">Modifier le profil</button>
+                  </form>
+                 
+              </div>
+              <p></p>
+          </div>
+      </div>
+  
+  </div>

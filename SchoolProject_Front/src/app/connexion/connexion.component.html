@@ -1,0 +1,28 @@
+<div class="container mt-4 d-grid gap-2">
+    <div class="content-login">
+        <div class="card shadow-card">
+            <div class="card-header text-dark bg-info card-header-back">
+                <h4 class="card-title-perso text-center">CONNEXION</h4>
+
+            </div>
+            <div class="card-body">
+                <form #forme="ngForm" (ngSubmit)="connexion(forme.value)">
+                    <div class="form-group">
+                        <label for="login" class="my-label">Login</label>
+                        <input class="form-control" type="text" name="login" ngModel="" #log placeholder="login">
+                    </div>
+                    <div class="form-groupe">
+                        <label for="login" class="my-label">Password</label>
+                        <input class="form-control" name="password" type="password" ngModel="" #pass
+                            placeholder="password">
+                    </div><br>
+                    <button class="btn btn-outline-success" type="submit">Se
+                        connecter</button>
+                </form><br>
+                <button (click)="CallInscription()" class="btn btn-outline-primary" type="submit">S'inscrire</button>
+            </div>
+            <h5 *ngIf="msgVisible==true" class="text-center" style="color: red;">{{msg}}</h5>
+        </div>
+    </div>
+
+</div>

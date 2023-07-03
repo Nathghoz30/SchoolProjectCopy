@@ -1,0 +1,31 @@
+<div class="container">
+    <div *ngFor="let a of article">
+      <button class="btn btn-outline-success" type="submit" (click)="retour()">Retour à l'accueil</button><br><br><br>
+      <div class="row">
+        <br>
+        <div class="col-sm-4" *ngIf="mediaExist(a.baniere)">
+          <img [src]="changeFormatMedia(a.baniere)" width="15%" class="card-img-top" alt="baniere" />
+        </div>
+        <div class="col-sm-4" *ngIf="!mediaExist(a.baniere)">
+          <img src="/assets/img/no-image.png" width="15%" class="card-img-top" alt="baniere" />
+        </div>
+        <div class="col-sm-8">
+          <h3 class="card-title">{{ a.nom }}</h3>
+          <div class="card-text" style="font-weight: bold;">Description: <br>
+  
+          </div>
+          <p>{{ a.description }}</p>
+          <h4>Prix: </h4>
+          <h5>{{a.prix}}€</h5><br>
+          <h6>Vendeur: {{a.vendeur.pseudo}}</h6>
+        </div>
+        <br>
+        <div *ngIf="btnVisible === true" class="row">
+          <div class="col-sm-6"></div>
+          <div class="col-sm-2"><button class="btn btn-outline-danger" (click)="paiement()">Acheter</button></div>
+          <div class="col-sm-2"><button class="btn btn-outline-warning" (click)="contacterVendeur()">Contacter le vendeur</button></div>
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
